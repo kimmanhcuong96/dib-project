@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Quản Trị Đi B</title>
+
+<script th:src="@{/lib/jquery/jquery.min.js}"></script>
+<link th:href="@{/lib/bootstrap/bootstrap.min.css}" rel="stylesheet" />
+<script th:src="@{/lib/bootstrap/bootstrap.min.js}"></script>
+<link th:href="@{/css/common.css}" rel="stylesheet" />
+<link th:href="@{/css/login.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+	<!-- header page -->
+	<div id="header">
+		<a th:href="@{http://91.com.vn/}"><img th:src="@{/image/top-banner.jpg}" id="header-background"> </a>
+	</div>
+	<div class="col-md-12" >
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  		<a class="navbar-brand" th:href="@{/}">Home</a>
+			  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    		<span class="navbar-toggler-icon"></span>
+			  		</button>
+				  	<div class="collapse navbar-collapse" id="navbarNav">
+				    	<ul class="navbar-nav">
+				      		<li class="nav-item ">
+				        		<a class="nav-link" th:href="@{/quanlydib}">Đi B </a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link" th:href="@{/quanlyvideo}">Video </a>
+				      		</li>
+				      		<li class="nav-item ">
+				        		<a class="nav-link" th:href="@{/quanlybanner}">Banner  <span class="sr-only">(current)</span></a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link active" th:href="@{/registerAccounts}">Tạo tài khoản mới</a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link" th:href="@{/logout}">Log out</a>
+				      		</li>
+				    	</ul>
+				  	</div>
+				</nav>
+			</div>
+		</div>
+	
+	<div id="container">
+		<form th:action="@{/registerAccount}" method="post">
+			<input placeholder="Tài khoản" name="user" /> <input
+				placeholder="mật khẩu" name="password" /> <br /> <input
+				type="submit" value="Đăng ký" /> <br />
+			<div id="error-info" th:text="${message}"></div>
+		</form>
+	</div>
+	<div id="bottom-side-result" style="margin:20px 0px;" class="row">
+			<div class="col-md-12" id="botton-container">
+			 	<div style="margin-top: 10px;"> Công ty TNHH Bảo tàng Radio </div> 
+				<div> Số 17-BT3 KĐT Cổ Nhuế, Bắc Từ Liêm, Hà Nội </div>
+			</div>
+		</div>
+</body>
+
+</html>

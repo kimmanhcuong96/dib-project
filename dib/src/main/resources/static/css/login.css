@@ -1,0 +1,42 @@
+#header{
+	background-color: rgb(253,73,0);
+	color: white;
+	font-weight: bold; 
+	min-height: 80px;
+}
+
+.header-tittle{
+	min-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#container{
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F6F6F6;
+	margin: 20px;
+}
+
+#container input{
+	margin: 10px;
+}
+
+#login-container{
+	height: 400px;
+	background-color: #F6F6F6;
+	margin: 20px;
+}
+
+#login-container div {
+	text-align: center;
+}
+
+#login-container h3{
+	text-align: center;
+}
+

@@ -1,0 +1,36 @@
+
+#result-content tr:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+#result-content tr:active{
+	color: red;
+}
+
+#result-content tr:visited{
+	color:green;
+}
+
+#pagination input{
+/* 	width: 100px; */
+}
+
+/* #pagination td{ */
+/* 	width: 120px !important; */
+/* } */
+
+#currentPage{
+	width: 70px;
+	text-align: center;
+}
+
+#re-search{
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+
+#container{
+	min-height: 600px;
+}

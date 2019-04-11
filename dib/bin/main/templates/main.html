@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Tra cứu đi B</title>
+<script th:src="@{/lib/jquery/jquery.min.js}"></script>
+<link th:href="@{/lib/bootstrap/bootstrap.min.css}" rel="stylesheet" />
+<script th:src="@{/lib/bootstrap/bootstrap.min.js}"></script>
+<link th:href="@{/css/common.css}" rel="stylesheet" />
+<link th:href="@{/css/dib-main.css}" rel="stylesheet" />
+<script th:src="@{/js/searchDiB.js}"></script>
+
+</head>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+	serverContextPath =  /*[[@{/}]]*/;
+/*]]>*/
+</script>
+
+<body>
+
+<!-- header page -->
+	<div id="header">
+		<a th:href="@{http://91.com.vn/}"><img th:src="@{/image/top-banner.jpg}" id="header-background"> </a>
+	</div>
+	<!-- content page -->
+	<div id="general-container">
+		<div id="top-side">
+		<div id= search-zone-container>
+			<div id="search-zone">
+				<div class="row" id="value-input-zone">
+					<div id="left-side" class="col-md-6">
+						<div class="row element">
+							<div class="col-md-4 tittle">Họ tên</div>
+							<div class="col-md-8">
+								<input id="inputName" class="input-data " name="name"
+									placeholder="Họ và Tên" />
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle">Quê quán</div>
+							<div class="col-md-8">
+								<select id="inputCity" class="input-data " name="city">
+									<option value="none">-Tỉnh/Thành phố-</option>
+								</select>
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle"></div>
+							<div class="col-md-8">
+								<input id="inputWard" class="input-data " name="ward"
+									placeholder="Phường/Xã" />
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle">Năm sinh</div>
+							<div class="col-md-8" id="sub-input">
+								<input id="inputStartBirthDay" class="input-data "
+									name="startBirthDay" placeholder="Từ năm" /> <input
+									id="inputEndBirthDay" class="input-data " name="endBirthDay"
+									placeholder="Đến năm" />
+							</div>
+						</div>
+					</div>
+					<div id="right-side" class="col-md-6">
+						<div class="row element">
+							<div class="col-md-4 tittle">Bí danh</div>
+							<div class="col-md-8">
+								<input id="inputAlias" class="input-data " name="alias"
+									placeholder="Bí danh" />
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle"></div>
+							<div class="col-md-8">
+								<select id="inputDistrict" class="input-data " name="district">
+									<option value="none">-Quận/Huyện-</option>
+								</select>
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle"></div>
+							<div class="col-md-8">
+								<input id="inputVillage" class="input-data " name="village"
+									placeholder="Thôn/Xóm" />
+							</div>
+						</div>
+						<div class="row element">
+							<div class="col-md-4 tittle">Năm Đi B</div>
+							<div class="col-md-8" id="sub-input">
+								<input id="StartGOB" class="input-data " name="starGoB"
+									placeholder="Từ năm" /> <input id="endGOB" class="input-data "
+									name="endGoB" placeholder="Đến năm" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="search-action" class="row">
+					<div class="col-md-5"></div>
+					<div class="col-md-4" id="searchBtn-zone">
+						<form id="submitSearch" th:action="@{/searchInformation}" method="post">
+							<input id="search-button" type="submit" value="Tra cứu" />
+						</form>
+					</div>
+					<div class="col-md-3" id="clearBtn-zone">
+						<input id="clear-button" type="button" onclick="clearData()"
+							value="Nhập lại" />
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="banner-zone">
+				<div id="banner-top">
+					<div class="banner-site" >
+						<a th:href=${topAdLink} target="_blank">
+							<img th:src="@{/getTopBanner}" height= 210px width= 352px />
+						</a>
+					</div>
+				</div>
+				<div id="banner-bottom">
+					<div class="banner-site" >
+						<a th:href=${bottomAdLink} target="_blank">
+							<img th:src="@{/getBottomBanner}" height= 210px width= 352px />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="middle-side">
+			<div id="video-container">
+<!-- 				<div class="video-set" id="video-set-first"></div> -->
+<!-- 				<div class="video-set" id="video-set-second"></div> -->
+			</div>
+		</div>
+		<div id="bottom-side">
+			<div id="botton-container">
+			 	<div style="margin-top: 10px;"> Bản quyền dữ liệu thuộc về Trung tâm Lưu trữ Quốc gia III </div> 
+				<div> @2018 Công ty TNHH Bảo tàng Radio </div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

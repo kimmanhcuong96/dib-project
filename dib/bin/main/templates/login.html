@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Login Page</title>
+
+<script th:src="@{/lib/jquery/jquery.min.js}"></script>
+<link th:href="@{/lib/bootstrap/bootstrap.min.css}" rel="stylesheet" />
+<script th:src="@{/lib/bootstrap/bootstrap.min.js}"></script>
+<link th:href="@{/css/common.css}" rel="stylesheet" />
+<link th:href="@{/css/login.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+	<!-- header page -->
+	<div id="header">
+		<a th:href="@{http://91.com.vn/}"><img th:src="@{/image/top-banner.jpg}" id="header-background"> </a>
+	</div>
+	
+	<div id="container">
+		<div id="login-content">
+			<div style="text-align: center;">
+				<p th:if="${param.error}" class="error">Invalid email or password</p>
+	       		<p th:if="${param.logout}" class="success">You have been logged out</p>
+			</div>
+			<div >
+		        <h3>Login to continue</h3>
+			</div>
+			<div style="text-align: center;">
+				<form th:action="@{/login}" method="POST">
+		            <input type="text" name="username" placeholder="Your username" /><br />
+		            <input type="password" name="password" placeholder="Your password" /><br />
+		            <button type="submit">Login</button> <br />
+		        </form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
